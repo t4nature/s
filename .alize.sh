@@ -30,7 +30,12 @@ alias get_my_vimrc="curl $MY_CONFIG_URL\"vimrc\" > .vimrc"
 alias get_my_alize="curl $MY_CONFIG_URL\".alize.sh\" > .alize.sh"
 alias get_gitignore='get_my_gitignore'
 
-alias vundle_update='v -c "PluginUpdate"'
+alias update_vundle='v -c "PluginUpdate"'
+
+alias update_rustup='rustup update stable && rustup override set stable'
+alias update_pip='pip list --outdated --format=json | jq -r ".[] | .name" | xargs -n 1 pip install --upgrade'
+alias update_cargo_packages='cargo install-update -a;'
+
 
 alias szz='source ~/.zshrc'
 alias sz='source ~/.alize.sh'
