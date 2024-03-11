@@ -247,6 +247,7 @@ alias tl='tmux select-pane -R'
 
 alias n='nsc1'
 alias car='cargo'
+alias cg='cargo'
 alias nsc='screen -L -t `date +D%y.%m.%dT%H:%M:%S` -S `date +D%y.%m.%dT%H:%M:%S`'
 # alias nsc='screen -L -t `date +D%y.%m.%dT%H:%M:%S` -S `date +D%y.%m.%dT%H:%M:%S`'
 # alias lsc='screen -ls'
