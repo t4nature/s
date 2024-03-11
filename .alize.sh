@@ -24,6 +24,9 @@ nsc1()
 }
 
 
+MY_CONFIG_URL='https://raw.githubusercontent.com/t4nature/s/main/'
+alias get_my_gitignore="curl $MY_CONFIG_URL\"gitignore\" > .gitignore"
+alias get_gitignore='get_my_gitignore'
 
 alias szz='source ~/.zshrc'
 alias sz='source ~/.alize.sh'
