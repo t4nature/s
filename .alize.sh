@@ -30,6 +30,8 @@ alias get_my_vimrc="curl $MY_CONFIG_URL\"vimrc\" > .vimrc"
 alias get_my_alize="curl $MY_CONFIG_URL\".alize.sh\" > .alize.sh"
 alias get_gitignore='get_my_gitignore'
 
+alias vundle_update='v -c "PluginUpdate"'
+
 alias szz='source ~/.zshrc'
 alias sz='source ~/.alize.sh'
 # alias up='unset https_proxy; unset ALL_PROXY; unset http_proxy; export GOPROXY=""; unset proxyserveraddr; unset proxyserverport; unset HTTP_PROXY; unset HTTPS_PROXY; unset FTP_PROXY; unset all_proxy; unset SOCKS_PROXY; unset NO_PROXY; unset ftp_proxy; unset socks_proxy; unset no_proxy;'
@@ -237,7 +239,6 @@ alias tl='tmux select-pane -R'
 
 alias n='nsc1'
 alias car='cargo'
-alias cg='cargo'
 alias nsc='screen -L -t `date +D%y.%m.%dT%H:%M:%S` -S `date +D%y.%m.%dT%H:%M:%S`'
 # alias nsc='screen -L -t `date +D%y.%m.%dT%H:%M:%S` -S `date +D%y.%m.%dT%H:%M:%S`'
 # alias lsc='screen -ls'

@@ -12,6 +12,8 @@ source ~/.alize.sh
 setopt nonomatch
 source $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' > .zshrc
 
+git clone https://github.com/VundleVim/vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 MY_CONFIG_URL='https://raw.githubusercontent.com/t4nature/s/main/'
 curl $MY_CONFIG_URL\".alize.sh\" > .alize.sh
 
