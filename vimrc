@@ -152,7 +152,7 @@ inoremap <C-UP> <UP><UP><UP><UP><UP>
 inoremap <C-DOWN> <DOWN><DOWN><DOWN><DOWN><DOWN>
 inoremap ,, <Esc>la
 inoremap <C-o> <Esc>o
-inoremap <C-O> <Esc>O
+" inoremap <C-O> <Esc>O
 inoremap <C-e> <End>
 inoremap <C-l> _
 vnoremap Y "+y
