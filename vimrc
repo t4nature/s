@@ -51,7 +51,6 @@ Plugin 'tpope/vim-commentary'
 " Plugin 'shawncplus/phpcomplete.vim'
 " Plugin 'craigemery/vim-autotag'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'rust-lang/rust.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 " Plugin 'fatih/vim-go'
@@ -62,7 +61,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'bling/vim-bufferline'
 " Plugin 'artur-shaik/vim-javacomplete2'
 " Plugin 'ervandew/supertab'
-" Plugin 'SirVer/ultisnips'
+Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
  " Plugin 'chemzqm/wxapp.vim'
 
@@ -103,8 +102,7 @@ set ruler
 set hlsearch
 set incsearch
 set autoread
-" set listchars=tab:»■,trail:■
-set listchars=tab:»»,trail:■
+set listchars=tab:»■,trail:■
 set list
 set wildmenu
 set wildmode=longest:list,full
@@ -152,7 +150,7 @@ inoremap <C-UP> <UP><UP><UP><UP><UP>
 inoremap <C-DOWN> <DOWN><DOWN><DOWN><DOWN><DOWN>
 inoremap ,, <Esc>la
 inoremap <C-o> <Esc>o
-" inoremap <C-O> <Esc>O
+inoremap <C-O> <Esc>O
 inoremap <C-e> <End>
 inoremap <C-l> _
 vnoremap Y "+y
@@ -214,6 +212,7 @@ nnoremap mb G
 nnoremap mt gg
 nmap <C-i> gcc
 imap <C-i> gcc
+" imap <C-TAB> gcc
 vmap <C-i> gc
 map q: :q
 nnoremap ; :
@@ -334,6 +333,11 @@ let g:UltiSnipsExpandTrigger="<c-m>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-n>"
 
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
+
+
 
 " nnoremap s i
 nnoremap e i
@@ -355,8 +359,9 @@ nnoremap <Leader>f :resize +20<CR>
 
 "let g:ycm_enable_diagnostic = 0
 "let g:ycm_syntastic_enable = 0
-"let g:ycm_use_ultisnips_completer = 1
+" let g:ycm_use_ultisnips_completer = 1
 let g:ycm_key_list_stop_completion = ['<CR>']
+
 "let g:ycm_semantic_triggers =  {
 "           \   'c' : ['->', '.', 're!\w{1}'],
 "           \   'objc' : ['->', '.', 're!\[[_a-zA-Z]+\w*\s', 're!^\s*[^\W\d]\w*\s',
@@ -377,8 +382,9 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif "离开插入模式后自动关闭预览窗口
 let g:ycm_key_list_previous_completion = ['<Up>']
 let g:ycm_confirm_extra_conf=0 "关闭加载.ycm_extra_conf.py提示
-" "let g:ycm_min_num_of_chars_for_completion=1 " 从第2个键入字符就开始罗列匹配项
-" "let g:ycm_seed_identifiers_with_syntax=1    " 语法关键字补全
+" 从第2个键入字符就开始罗列匹配项
+let g:ycm_min_num_of_chars_for_completion=1
+let g:ycm_seed_identifiers_with_syntax=1    " 语法关键字补全
 "nnoremap <C-g> :YcmForceCompileAndDiagnostics<CR>
 let g:ycm_complete_in_strings = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
@@ -390,26 +396,10 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 1
 "<Down>"
 " UltiSnips setting
 nnoremap <leader>gr :YcmCompleter GoToDefinitionElseDeclaration<CR>
-
+" nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " 跳转到定义
 " let g:ycm_max_diagnostics_to_display = 5
-" let g:ycm_collect_identifiers_from_tags_files = 1
-"let g:UltiSnipsExpandTrigger="<c-m>"
-"let g:UltiSnipsJumpForwardTrigger="<c-b>"
-"let g:UltiSnipsJumpBackwardTrigger="<c-n>"
-
-"inoremap <expr> <Down>     pumvisible() ? \<C-n>" : "\<Down>"
-"inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
-"inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
-"inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
-
-
-
-" nnoremap s i
-nnoremap e i
-nnoremap <C-y> Vy
-inoremap <C-y> <ESC>Vy
-inoremap <C-d> <ESC>4dh<DEL>a
+"" let g:ycm_collect_identifiers_from_tags_files = 1
 
 
 
@@ -425,8 +415,6 @@ inoremap <C-d> <ESC>4dh<DEL>a
 " noremap <leader>rd :call LanguageClient#textDocument_definition()<cr>
 " noremap <leader>rr :call LanguageClient#textDocument_references()<cr>
 " noremap <leader>rv :call LanguageClient#textDocument_hover()<cr>
-nnoremap Y Vy
-nnoremap <Leader>g :resize +20<CR>
 
 
 " " let g:ycm_filetype_whitelist = {
@@ -458,7 +446,7 @@ nnoremap <Leader>g :resize +20<CR>
 " let g:ycm_open_loclist_on_ycm_diags = 1
 " let g:ycm_complete_in_comments = 1
 
-" " let g:ycm_seed_identifiers_with_syntax = 1
+" let g:ycm_seed_identifiers_with_syntax = 1
 
 " let g:ycm_server_keep_logfiles = 1
 " let g:ycm_add_preview_to_completeopt = 1
