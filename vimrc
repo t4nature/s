@@ -332,7 +332,11 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 
 
-let g:UltiSnipsExpandTrigger="<C-m>"
+" Success
+" let g:UltiSnipsExpandTrigger="<C-L>"
+let g:UltiSnipsExpandTrigger="<TAB>"
+
+let g:UltiSnipsListSnippets="<C-M>"
 let g:UltiSnipsJumpForwardTrigger="<C-b>"
 let g:UltiSnipsJumpBackwardTrigger="<C-n>"
 
@@ -384,6 +388,7 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/
 " set completeopt=longest,menu    "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif "离开插入模式后自动关闭预览窗口
 let g:ycm_key_list_previous_completion = ['<Up>']
+let g:ycm_key_list_select_completion = ['<Down>']
 let g:ycm_confirm_extra_conf=0 "关闭加载.ycm_extra_conf.py提示
 " 从第2个键入字符就开始罗列匹配项
 let g:ycm_min_num_of_chars_for_completion=1
