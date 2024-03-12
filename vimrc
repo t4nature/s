@@ -60,7 +60,7 @@ Plugin 'vim-syntastic/syntastic'
 " Plugin 'arnaud-lb/vim-php-namespace'
 Plugin 'bling/vim-bufferline'
 " Plugin 'artur-shaik/vim-javacomplete2'
-" Plugin 'ervandew/supertab'
+Plugin 'ervandew/supertab'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
  " Plugin 'chemzqm/wxapp.vim'
@@ -150,9 +150,9 @@ inoremap <C-UP> <UP><UP><UP><UP><UP>
 inoremap <C-DOWN> <DOWN><DOWN><DOWN><DOWN><DOWN>
 inoremap ,, <Esc>la
 inoremap <C-o> <Esc>o
-inoremap <C-O> <Esc>O
+" inoremap <C-O> <Esc>O
 inoremap <C-e> <End>
-inoremap <C-l> _
+" inoremap <C-l> _
 vnoremap Y "+y
 vnoremap <C-c> "+y
 
@@ -185,7 +185,7 @@ nnoremap <Leader>h :vertical resize +2<CR>
 nnoremap <Leader>l :vertical resize -2<CR>
 nnoremap h<Leader> :vertical resize +2<CR>
 nnoremap l<Leader> :vertical resize -2<CR>
-inoremap <C-z> <Esc><C-z>
+inoremap <C-Z> <Esc><C-z>
 set timeout
 set timeoutlen=250
 " set ttimeout
@@ -194,13 +194,15 @@ set timeoutlen=250
 "保存文件
 " nnoremap <Leader><TAB> <C-w>w
 " inoremap <C-TAB> <ESC><C-w>w
+" nnoremap <Leader>w :w<CR>
 nnoremap <Leader>w :w<CR>
+inoremap <C-S> <Esc>:w<CR>a
 nnoremap <Leader>q :q<CR>
 " nnoremap <Leader>wq :wq<CR>
 nnoremap q<Leader> :q<CR>
 nnoremap <Leader>b :lclose<CR>
 nnoremap <Leader>qq :q\|q<CR>
-inoremap <C-\> <C-x><C-o>
+" inoremap <C-\> <C-x><C-o>
 vmap <Leader>y "+y
 vmap <Leader>d "+d
 nmap <Leader>p "+p
@@ -211,7 +213,7 @@ vmap <Leader>P "+P
 nnoremap mb G
 nnoremap mt gg
 nmap <C-i> gcc
-imap <C-i> gcc
+imap <C-i> <Esc>gcc<CR>i
 " imap <C-TAB> gcc
 vmap <C-i> gc
 map q: :q
@@ -232,7 +234,8 @@ set foldmethod=manual "set default foldmethod
 
 
 
-let g:SuperTabDefaultCompletionType = '<C-x><C-o>'
+let g:SuperTabDefaultCompletionType = '<C-l>'
+" let g:SuperTabDefaultCompletionType = '<C-x><C-o>'
 
 
 
@@ -329,9 +332,9 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 
 
-let g:UltiSnipsExpandTrigger="<c-m>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-n>"
+let g:UltiSnipsExpandTrigger="<C-m>"
+let g:UltiSnipsJumpForwardTrigger="<C-b>"
+let g:UltiSnipsJumpBackwardTrigger="<C-n>"
 
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
