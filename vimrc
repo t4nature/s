@@ -227,12 +227,13 @@ vmap <Leader>P "+P
 nnoremap mb G
 nnoremap mt gg
 nmap <C-I> gcc
+nmap <C-L> gcc
 " inoremap <C-L> <Esc>gcc<CR>i
 inoremap <C-L> <Esc>:Commentary<CR>a
 " inoremap <C-L> <Esc>gcci
 " imap <C-TAB> gcc
 " vmap <C-i> gc
-vmap <C-I> gc
+vmap <C-L> gc
 map q: :q
 nnoremap ; :
 " inoremap ` $
