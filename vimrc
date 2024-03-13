@@ -167,8 +167,22 @@ noremap * *:set hlsearch<cr>
 
 
 
+" easymotion
+let g:EasyMotion_leader_key = 'f'
+" <Leader>f{char} to move to {char}
+" map  <Leader>f <Plug>(easymotion-bd-f)
+" nmap <Leader>f <Plug>(easymotion-overwin-f)
 
+" " s{char}{char} to move to {char}{char}
+" nmap <Leader>s <Plug>(easymotion-overwin-f2)
 
+" " Move to line
+" map <Leader>L <Plug>(easymotion-bd-jk)
+" nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" " Move to word
+" map  <Leader>w <Plug>(easymotion-bd-w)
+" nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 
 nnoremap b :s/\n\n    //<CR>n
@@ -215,7 +229,8 @@ nnoremap mt gg
 nmap <C-i> gcc
 imap <C-i> <Esc>gcc<CR>i
 " imap <C-TAB> gcc
-vmap <C-i> gc
+" vmap <C-i> gc
+vmap <C-i> gcc
 map q: :q
 nnoremap ; :
 " inoremap ` $
@@ -257,7 +272,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 ""设置树的显示图标
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
-let NERDTreeIgnore = ['\.pyc$']  " 过滤所有.pyc文件不显示
 let g:NERDTreeShowLineNumbers=1  " 是否显示行号
 "let g:NERDTreeHidden=0     "不显示隐藏文件
 "Making it prettier
@@ -271,7 +285,7 @@ let NERDTreeQuitOnOpen = 1
 
 
 "启用后; 预览窗口的内容将包含从完成的docblock注释中提取的信息; 启用此选项也会将返回类型添加到功能的完成菜单中
-let g:phpcomplete_parse_docblock_comments = 1
+" let g:phpcomplete_parse_docblock_comments = 1
 
 
 
@@ -311,7 +325,6 @@ endif
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_section_z=''
-let g:EasyMotion_leader_key = 'f'
 let g:airline#extensions#tabline#left_sep=''
 let g:airline#extensions#tabline#left_alt_sep=''
 let g:airline#extensions#tabline#buffer_idx_mode = 1
@@ -368,7 +381,7 @@ let g:ycm_confirm_extra_conf=0
 " 开启基于tag的补全，可以在这之后添加需要的标签路径  
 let g:ycm_collect_identifiers_from_tags_files=1
 "注释和字符串中的文字也会被收入补全
-let g:ycm_collect_identifiers_from_comments_and_strings = 0
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
 " 输入第1个字符开始补全
 let g:ycm_min_num_of_chars_for_completion=1
 " 禁止缓存匹配项,每次都重新生成匹配项
@@ -410,7 +423,6 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif "离开插入模式后自动关闭预览窗口
 let g:ycm_key_list_previous_completion = ['<Up>']
 let g:ycm_key_list_select_completion = ['<Down>']
-let g:ycm_confirm_extra_conf=0 "关闭加载.ycm_extra_conf.py提示
 "nnoremap <C-g> :YcmForceCompileAndDiagnostics<CR>
 "let g:ycm_key_list_invoke_completion = ['<TAB>']
 " YCM settings
@@ -423,7 +435,6 @@ nnoremap <leader>gr :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " 跳转到定义
 " let g:ycm_max_diagnostics_to_display = 5
-"" let g:ycm_collect_identifiers_from_tags_files = 1
 
 
 
@@ -468,7 +479,6 @@ nnoremap <leader>gr :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " let g:ycm_echo_current_diagnostic = 1
 " let g:ycm_always_populate_location_list = 1
 " let g:ycm_open_loclist_on_ycm_diags = 1
-" let g:ycm_complete_in_comments = 1
 
 
 " let g:ycm_server_keep_logfiles = 1
