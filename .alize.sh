@@ -47,6 +47,8 @@ alias up='export GOPROXY=""; unset https_proxy ALL_PROXY http_proxy proxyservera
 alias bu='bu1(){ clang -v $@ && echo "-------now begin running-------" && ./a.out; }; bu1 $@'
 alias vps='ssh -o ServerAliveInterval=30 -p 28422 root@144.34.182.118'
 alias vhs='vim ~/.zsh_history'
+alias pd='echo ${PWD##*/}'
+alias pw='echo ${PWD##*/}'
 # alias cp='cp -avvv'
 # alias pro='export ssr_pro="192.168.98.226:9910"; export https_proxy=$ssr_pro; export http_proxy=$ssr_pro; export ftp_proxy=$ssr_pro; export ALL_PROXY=$ssr_pro; export all_proxy=$ssr_pro; export HTTP_PROXY=$ssr_pro; export HTTPS_PROXY=$ssr_pro; export GOPROXY="https://goproxy.cn"; export GOPROXY="https://mirrors.aliyun.com/goproxy"; export GOPROXY="https://goproxy.io"'
 # alias pro='export ssr_pro="http://192.168.12.1:9910"; export https_proxy=$ssr_pro; export http_proxy=$ssr_pro; export ftp_proxy=$ssr_pro; export ALL_PROXY=$ssr_pro; export all_proxy=$ssr_pro; export HTTP_PROXY=$ssr_pro; export HTTPS_PROXY=$ssr_pro; export GOPROXY="https://goproxy.cn"; export GOPROXY="https://mirrors.aliyun.c"; export GOPROXY="https://goproxy.io"'
