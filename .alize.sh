@@ -8,7 +8,7 @@ cd_ll()
 {
     # 使用‘\’可以调用原始命令
     \cd $1
-    ls -ahl --color=auto
+    ls -ahl --color=always
 }
 
 rerm()
@@ -129,7 +129,8 @@ alias ga='git add'
 # alias cp='cp -ia'
 alias rm='move1(){ rsync -avcPh $@ ~/backup/ && /bin/rm $@ -rvf; };move1 $@'
 #alias mv='mv -i'
-alias ll='ls -a -l -h --color=auto'
+alias ll='ls -a -l -h --color=always'
+alias ls='ls --color=always'
 alias stop='shutdown -h now'
 alias cd..='cd ..'
 alias cd='cd_ll'
@@ -194,7 +195,9 @@ alias gfm='sf . *.go|xargs gofmt -w'
 # alias plcg='c $HOME/object/myzsh/oh-my-zsh && /bin/cp /root/.zsh_history `uname -m`/root && /bin/cp $HOME/.zsh_history `uname -m`$HOME && /bin/cp /home/www/.zsh_history `uname -m`/home/www && gac "s" && git fetch origin && git merge origin/master -m "merg" && c -'
 alias c-='c -'
 alias .c='cd ..'
-alias jfm='python -mjson.tool|less'
+# alias jfm='python -mjson.tool|less'
+alias jfm='jq --color-output'
+alias jq='jq --color-output'
 alias k='kill -9'
 alias bb='kill -STOP'
 alias ff='kill -CONT'
@@ -218,7 +221,7 @@ alias a='up; axel -n 8 -a -U "http://127.0.0.1:9910"'
 alias g='aria2c '
 alias aa='up; axel -a -n 8'
 alias postman='nohup /usr/Postman/Postman &'
-alias le='less'
+alias le='less -R'
 alias tfc='tar xvf'
 alias dd='dd status=progress'
 # alias npm='npm -proxy "http://127.0.0.1:9910"'
