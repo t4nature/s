@@ -433,10 +433,10 @@ alias yt='yt-dlp -o "%(title).80s_%(id)s.%(ext)s" -i'
 alias aes='openssl aes-256-gcm'
 # alias croc='croc --internal-dns --socks5 "127.0.0.1:19050" --curve p521'
 
-t(){
-    trans -e google "$*";
-    # trans -e google "$@";
-};
+# t(){
+#     trans -e google "$*";
+#     # trans -e google "$@";
+# };
 
 # rec(){
     # while true; do
