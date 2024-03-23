@@ -140,8 +140,10 @@ hi Pmenu ctermfg=white ctermbg=55
 hi PmenuSel ctermfg=black ctermbg=2
 hi Search ctermfg=white ctermbg=55
 hi DiffChange ctermfg=black ctermbg=2
-hi SpellBad term=standout ctermfg=1 ctermbg=darkgrey ctermfg=darkred guibg=Red guifg=black
+" hi SpellBad term=standout ctermfg=1 ctermbg=black ctermfg=darkred guibg=Red guifg=black
+hi SpellBad term=standout ctermfg=1 ctermbg=darkred ctermfg=white guibg=Red guifg=black
 
+hi SpellCap ctermfg=darkyellow ctermbg=black
 " inoremap <C-LEFT> <LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
 " inoremap <C-RIGHT> <RIGHT><RIGHT><RIGHT><RIGHT><RIGHT><RIGHT><RIGHT><RIGHT><RIGHT><RIGHT>
 map <C-UP> <UP><UP><UP><UP><UP><UP>
