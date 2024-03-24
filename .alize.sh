@@ -34,7 +34,7 @@ alias update_vundle='v -c "PluginUpdate"'
 
 alias update_rustup='rustup update stable && rustup override set stable'
 alias update_pip='pip list --outdated --format=json | jq -r ".[] | .name" | xargs -n 1 pip install --upgrade'
-alias update_cargo_packages='cargo install-update -a; \rm  $TMPDIR/cargo-install* -rf'
+alias update_cargo_packages='cargo install-update -ag; \rm  $TMPDIR/cargo-install* -rf'
 # alias update_cargo_packages='cargo install-update -a'
 alias update_ycm='cd  ~/.vim/bundle/YouCompleteMe && git pull origin && git submodule update --init --recursive'
 
