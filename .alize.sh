@@ -490,3 +490,13 @@ mk_dev_shm()
 
 alias pwd_shm='echo /dev/shm$PWD'
 alias goto_pwd_shm='cd /dev/shm$PWD'
+
+
+mount_shm4user_with_size(){
+    WHOAMI=`whoami`
+
+    mkdir -p /mnt/whoami/$WHOAMI
+    chown $WHOAMI:$WHOAMI /mnt/whoami/$WHOAMI
+    chmod 700 /mnt/whoami/$WHOAMI
+    mount -t tmpfs -o size=$2,uid=$(id -u $WHOAMI),gid=$(id -g $WHOAMI) tmpfs /mnt/whoami/$WHOAMI
+}
