@@ -478,3 +478,11 @@ alias li='proot-distro login ubuntu --user ad'
 alias gpg='gpg --batch --pinentry-mode loopback'
 export GPG_TTY=$(tty)
 alias py='python3'
+
+
+mk_dev_shm()
+{
+    tmp_path=/dev/shm`pwd`
+    mkdir -p $tmp_path
+    chmod o-rwx $tmp_path
+}
