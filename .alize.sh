@@ -486,3 +486,5 @@ mk_dev_shm()
     mkdir -p $tmp_path
     chmod o-rwx $tmp_path
 }
+
+alias pwd_shm='echo /dev/shm$PWD'
