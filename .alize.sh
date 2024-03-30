@@ -27,7 +27,7 @@ nsc1()
 MY_CONFIG_URL='https://raw.githubusercontent.com/t4nature/s/main/'
 alias get_my_gitignore="curl $MY_CONFIG_URL\"gitignore\" > .gitignore"
 alias get_my_vimrc="curl $MY_CONFIG_URL\"vimrc\" > .vimrc"
-alias get_my_alize="curl $MY_CONFIG_URL\".alize.sh\" > .alize.sh"
+alias get_my_alize="curl $MY_CONFIG_URL\".alize.sh\" > .alize.sh && source .alize.sh"
 alias get_gitignore='get_my_gitignore'
 
 alias update_vundle='v -c "PluginUpdate"'
