@@ -485,6 +485,8 @@ mk_dev_shm()
     tmp_path=/dev/shm`pwd`
     mkdir -p $tmp_path
     chmod o-rwx $tmp_path
+    cd $tmp_path
 }
 
 alias pwd_shm='echo /dev/shm$PWD'
+alias goto_pwd_shm='cd /dev/shm$PWD'
