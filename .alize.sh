@@ -144,7 +144,7 @@ alias sb='source ~/.bashrc'
 alias l='ll'
 alias lll='ll'
 alias c='cd'
-alias fl='rg -i'
+alias fl='rg -i --color=always'
 alias gr='rg'
 alias c.='cd..'
 alias cd...='cd..'
@@ -376,7 +376,7 @@ alias v='vim'
 alias adb='/system/bin/adb'
 alias ssh='ssh -o ServerAliveInterval=30'
 # alias ag='ag --noaffinity'
-alias ag='rg -i'
+alias ag='fl'
 replace_strg(){
     sed -i  "s/$1/$2/g"  `ag $1 $3 -l | xargs`
 }
