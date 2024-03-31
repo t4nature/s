@@ -497,3 +497,6 @@ mount_shm4user_with_size(){
     chmod 700 /mnt/whoami/$WHOAMI
     mount -t tmpfs -o size=$2,uid=$(id -u $WHOAMI),gid=$(id -g $WHOAMI) tmpfs /mnt/whoami/$WHOAMI
 }
+
+export RUSTC_WRAPPER=sccache
+alias unset_sccache='unset RUSTC_WRAPPER'
