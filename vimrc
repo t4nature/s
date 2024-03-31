@@ -64,6 +64,7 @@ Plugin 'ervandew/supertab'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
  " Plugin 'chemzqm/wxapp.vim'
+Plugin 'chrisbra/Colorizer'
 
 
 " All of your Plugins must be added before the following line
@@ -491,3 +492,6 @@ nnoremap <leader>gr :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 
 let g:ycm_disable_for_files_larger_than_kb = 10000
+
+let g:colorizer_auto_filetype='css, html, log'
+nmap <leader>c :ColorHighlight<CR>
