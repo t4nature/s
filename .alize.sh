@@ -168,7 +168,7 @@ alias goo='googler --proxy localhost:9910 -c zh -l zh -n 5'
 # alias kpa='/bin/bash ~/cofig/shs/kill_all.sh'
 alias sc='screen'
 
-alias sp='ps -ef | rg -v rg | rg -i'
+alias sp='ps -ef | rg -v "rg\ " | rg -i'
 alias watch='watch -d'
 alias lcr='lcr1(){chmod +x $@ && ./$@}; lcr1 $@'
 alias csc='rm /var/run/screen/S-root/*'

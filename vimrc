@@ -145,6 +145,11 @@ hi DiffChange ctermfg=black ctermbg=2
 hi SpellBad term=standout ctermfg=1 ctermbg=darkred ctermfg=white guibg=Red guifg=black
 
 hi SpellCap ctermfg=darkyellow ctermbg=black
+
+hi airline_error_inactive_red term=bold cterm=bold ctermfg=232 ctermbg=160 gui=bold guifg=#000000 guibg=#990000
+hi DiffText term=bold cterm=bold ctermfg=232 ctermbg=160 gui=bold guifg=#000000 guibg=#990000
+
+
 " inoremap <C-LEFT> <LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
 " inoremap <C-RIGHT> <RIGHT><RIGHT><RIGHT><RIGHT><RIGHT><RIGHT><RIGHT><RIGHT><RIGHT><RIGHT>
 map <C-UP> <UP><UP><UP><UP><UP><UP>
