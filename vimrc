@@ -443,6 +443,7 @@ let g:ycm_key_list_select_completion = ['<Down>']
 "<Down>"
 " UltiSnips setting
 nnoremap <leader>gr :YcmCompleter GoToDefinitionElseDeclaration<CR>
+nnoremap <leader>gc :YcmCompleter GoToCallers<CR>
 " nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " 跳转到定义
 " let g:ycm_max_diagnostics_to_display = 5
