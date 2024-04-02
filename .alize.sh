@@ -376,7 +376,7 @@ alias v='vim'
 alias adb='/system/bin/adb'
 alias ssh='ssh -o ServerAliveInterval=30'
 # alias ag='ag --noaffinity'
-alias ag='fl'
+alias ag='fl  -A 5 -B 5'
 replace_strg(){
     sed -i  "s/$1/$2/g"  `ag $1 $3 -l | xargs`
 }
