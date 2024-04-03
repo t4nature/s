@@ -219,7 +219,9 @@ nnoremap <Leader><TAB> <C-w>w
 "保存文件
 nnoremap <Leader>w :w<CR>
 inoremap <C-S> <Esc>:w<CR>a
-nnoremap <Leader>q :q<CR>
+" nnoremap <Leader>q :q<CR>
+nnoremap <Leader>q :bd<CR>
+nnoremap <Leader>qq :q<CR>
 " nnoremap <Leader>wq :wq<CR>
 nnoremap q<Leader> :q<CR>
 nnoremap <Leader>b :lclose<CR>
