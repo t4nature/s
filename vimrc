@@ -213,10 +213,10 @@ set timeoutlen=250
 " set ttimeout
 " set ttimeoutlen=10000
 
-"保存文件
-" nnoremap <Leader><TAB> <C-w>w
+nnoremap <Leader><TAB> <C-w>w
 " inoremap <C-TAB> <ESC><C-w>w
 " nnoremap <Leader>w :w<CR>
+"保存文件
 nnoremap <Leader>w :w<CR>
 inoremap <C-S> <Esc>:w<CR>a
 nnoremap <Leader>q :q<CR>
@@ -349,6 +349,9 @@ nmap <leader>6 <Plug>AirlineSelectTab6
 nmap <leader>7 <Plug>AirlineSelectTab7
 nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
+nmap <leader>- <Plug>AirlineSelectPrevTab
+nmap <leader>+ <Plug>AirlineSelectNextTab
+let g:airline_inactive_collapse=1
 
 
 
@@ -405,9 +408,9 @@ let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
 " 设置在下面几种格式的文件上屏蔽ycm
 let g:ycm_filetype_blacklist = {
-      \ 'tagbar' : 1,
-      \ 'nerdtree' : 1,
-      \}
+            \ 'tagbar' : 1,
+            \ 'nerdtree' : 1,
+            \}
 
 let g:ycm_enable_diagnostic = 1
 let g:ycm_syntastic_enable = 1
