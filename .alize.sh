@@ -378,10 +378,10 @@ alias ssh='ssh -o ServerAliveInterval=30'
 # alias ag='ag --noaffinity'
 alias ag='fl  -A 5 -B 5'
 replace_strg(){
-    sed -i  "s/$1/$2/g"  `ag $1 $3 -l | xargs`
+    sed -i  "s/$1/$2/g"  `\rg $1 $3 -l | xargs`
 }
 replace_str(){
-    sed -i  "s/$1/$2/"  `ag $1 $3 -l | xargs`
+    sed -i  "s/$1/$2/"  `\rg $1 $3 -l | xargs`
 }
 alias sg='replace_strg'
 alias sstr='replace_str'
