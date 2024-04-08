@@ -372,6 +372,7 @@ alias sodu='renice -n -20'
 alias df='df -h'
 alias v='gac "s" & vim'
 alias v='vim'
+alias save_tmux='tmux capture-pane -S - -E - -p'
 
 alias adb='/system/bin/adb'
 alias ssh='ssh -o ServerAliveInterval=30'
