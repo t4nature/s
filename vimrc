@@ -152,7 +152,7 @@ hi DiffText term=bold cterm=bold ctermfg=232 ctermbg=160 gui=bold guifg=#000000 
 
 " inoremap <C-LEFT> <LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
 " inoremap <C-RIGHT> <RIGHT><RIGHT><RIGHT><RIGHT><RIGHT><RIGHT><RIGHT><RIGHT><RIGHT><RIGHT>
-map <C-UP> <UP><UP><UP><UP><UP><UP>
+map <C-UP> <UP><UP><UP><UP><UP>
 map <C-DOWN> <DOWN><DOWN><DOWN><DOWN><DOWN>
 inoremap <C-UP> <UP><UP><UP><UP><UP>
 inoremap <C-DOWN> <DOWN><DOWN><DOWN><DOWN><DOWN>
