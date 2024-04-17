@@ -502,4 +502,5 @@ mount_shm4user_with_size(){
 }
 
 export RUSTC_WRAPPER=sccache
+export SCCACHE_CACHE_SIZE="40G"
 alias unset_sccache='unset RUSTC_WRAPPER'
