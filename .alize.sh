@@ -410,7 +410,7 @@ alias mu='cvlc --play-and-exit'
 source $HOME/.cargo/env
 alias fs='ipfs'
 alias ta='tail -n 100'
-alias yy='pro && yt-dlp -o "%(title).80s_%(id)s.%(ext)s" -i'
+alias yy='pro && yt-dlp -o "%(title).70s_%(id)s.%(ext)s" -i'
 
 
 # yt(){
@@ -418,16 +418,16 @@ alias yy='pro && yt-dlp -o "%(title).80s_%(id)s.%(ext)s" -i'
 # }
 y(){
     url=$*
-    yt-dlp -o "%(title).80s_%(id)s.%(ext)s" -i --proxy socks5://127.0.0.1:9909 $url
+    yt-dlp -o "%(title).70s_%(id)s.%(ext)s" -i --proxy socks5://127.0.0.1:9909 $url
     # yt-dlp -o "%(title).80s_%(id)s.%(ext)s" -i --proxy socks5://127.0.0.1:9909 $url && exit
 }
 p(){
     url=$*
-    yt-dlp -o "%(title).80s_%(id)s.%(ext)s" -i --proxy socks5://127.0.0.1:19909 $url
+    yt-dlp -o "%(title).70s_%(id)s.%(ext)s" -i --proxy socks5://127.0.0.1:19909 $url
     # yt-dlp -o "%(title).80s_%(id)s.%(ext)s" -i --proxy socks5://127.0.0.1:19909 $url && exit
 }
-alias pp='yt-dlp -o "%(title).80s_%(id)s.%(ext)s" -i --proxy socks5://127.0.0.1:19909'
-alias yt='yt-dlp -o "%(title).80s_%(id)s.%(ext)s" -i'
+alias pp='yt-dlp -o "%(title).70s_%(id)s.%(ext)s" -i --proxy socks5://127.0.0.1:19909'
+alias yt='yt-dlp -o "%(title).70s_%(id)s.%(ext)s" -i'
 # alias trans='trans -x 127.0.0.1:9910'
 # alias trans='trans1(){ trans -e google "$*"; }; trans1'
 alias aes='openssl aes-256-gcm'
