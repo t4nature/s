@@ -382,10 +382,10 @@ alias ssh='ssh -o ServerAliveInterval=30'
 # alias ag='ag --noaffinity'
 alias ag='fl  -A 5 -B 5'
 restart_geph(){
-    curl -X POST -d '{"jsonrpc":"2.0","method":"kill","params":[],"id":1}' http://127.0.0.1:$1
+    curl-s -X POST -d '{"jsonrpc":"2.0","method":"kill","params":[],"id":1}' http://127.0.0.1:$1
 }
 stats_geph(){
-    curl -X POST -d '{"jsonrpc":"2.0","method":"basic_stats","params":[],"id":1}' http://127.0.0.1:$1
+    curl -s -X POST -d '{"jsonrpc":"2.0","method":"basic_stats","params":[],"id":1}' http://127.0.0.1:$1
 }
 replace_strg(){
     sed -i  "s/$1/$2/g"  `\rg $1 $3 -l | xargs`
