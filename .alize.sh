@@ -505,8 +505,9 @@ mount_shm4user_with_size(){
 export RUSTC_WRAPPER=sccache
 export SCCACHE_CACHE_SIZE="40G"
 alias unset_sccache='unset RUSTC_WRAPPER'
-export RUSTUP_HOME=/usr/local
 export GNUPGHOME=$HOME/.gnupg/trezor
-
 alias ssh-shell='trezor-agent ~/.ssh/github.pub -v --shell'
 alias pyenv='source /usr/local/py3/bin/activate'
+
+export RUSTUP_HOME=/usr/local
+alias installrs='curl --proto "=https" --tlsv1.2 -sSf https://sh.rustup.rs | sh'
