@@ -118,7 +118,7 @@ alias ee='export LANG=en_US.utf8'
 alias ec='export LANG=zh_CN.UTF-8'
 # alias lss='du -sh'
 alias lss='du -h -d 1 '
-alias gp='git push origin HEAD'
+alias gp='ssh-shell && git push origin HEAD'
 alias gpm='gpum(){ git push -u git@github.com:AlmondLee/$@; };gpum $@'
 alias tfx='tar xvf'
 alias gac='git add -A; git commit --gpg-sign -m'
@@ -511,3 +511,5 @@ alias pyenv='source /usr/local/py3/bin/activate'
 
 export RUSTUP_HOME=/usr/local
 alias installrs='curl --proto "=https" --tlsv1.2 -sSf https://sh.rustup.rs | sh'
+
+alias setacl='sudo setfacl -m u:pi:rwx'
