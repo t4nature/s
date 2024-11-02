@@ -79,7 +79,7 @@ alias '\gcl'='up && git clone --progress -v'
 # alias gcl='git -c http.proxy=http://127.0.0.1:9910 -c https.proxy=http://127.0.0.1:9910 clone --progress -v'
 # --recursive '
 # alias gcl='git -c http.proxy=socks5://127.0.0.1:1080 -c https.proxy=socks5://127.0.0.1:1080 clone --progress -v'
-alias apt='up; apt'
+alias apt='up; sudo apt'
 #'clo1(){ git clone https://github.com/$@; };clo1 $@'
 alias gclm='clo2(){ git clone git@github.com:t4nature/$@ && cd $@; };clo2 $@'
 alias mmi='make && make install'
@@ -107,7 +107,7 @@ alias goi='go mod init ${PWD##*/} && wget https://gitee.com/AlmondLee/simple_mir
 alias ggb='pro && time \go install -i -v -p 8 && ~/go/bin/${PWD##*/}'
 alias composer='composer -vvv'
 alias gzip='gzip -vvv'
-alias arm='apt remove'
+alias arm='sudo apt remove'
 alias wfx='watch -n 1 ls -al --block-size=M'
 
 alias bkp='bkpq(){tar -cvf $*.tar $* && xz -z -9 $*.tar && /bin/rm $* -f}; bkpq'
@@ -135,7 +135,7 @@ alias cd..='cd ..'
 alias cd='cd_ll'
 alias itui='gitui'
 alias tui='gitui'
-alias aud='up; apt upgrade -y'
+alias aud='up; sudo apt upgrade -y'
 alias cd.='cd ..'
 # alias v='gac "`date +%y.%m.%dT%H:%M:%S`"; vim'
 alias sb='source ~/.bashrc'
@@ -151,24 +151,23 @@ alias cd...='cd..'
 alias f='ffggg1(){ fg %$@; }; ffggg1 $@'
 alias gin='git init; git checkout -b dev1'
 # alias cat='less'
-alias yii='apt install -fy'
-alias yul='apt install -fy --print-uris'
+alias yii='sudo apt install -fy'
+alias yul='sudo apt install -fy --print-uris'
 alias dii='dpkg -i'
-alias ysc='apt search'
-alias yud='apt update -y; apt-get dist-upgrade -y'
+alias ysc='sudo apt search'
+alias yud='sudo apt update -y; sudo apt full-upgrade -y'
 alias gab='git branch -r | rg -iv "\->" | while read remote; do git branch --track "${remote#origin/}" "$remote"; done && git fetch --all'
 alias iop='iotop -d 1.5'
 alias iop='iotop -d 1.5'
 #3'
 
-alias op='top -d 1'
+alias op='top -d 35'
 # alias op='top -c -d 3'
-# alias mf='/bin/bash ~/cofig/shs/makeFast.sh'
 alias goo='googler --proxy localhost:9910 -c zh -l zh -n 5'
-# alias kpa='/bin/bash ~/cofig/shs/kill_all.sh'
 alias sc='screen'
 
-alias sp='ps -ef | rg -v "rg\ " | rg -i'
+# alias sp='ps -ef | rg -v "rg" | rg -i'
+alias sp='ps -ef | rg -i'
 alias watch='watch -d'
 alias lcr='lcr1(){chmod +x $@ && ./$@}; lcr1 $@'
 alias csc='rm /var/run/screen/S-root/*'
@@ -176,11 +175,10 @@ alias nd='mkdir -p'
 alias wsc='screen -wipe'
 alias sf='fd1(){ find $1 -iname $2; }; fd1 $@'
 alias s='su.sh'
-#'ssh root@127.0.0.1'
+# alias ssudo='ssh root@localhost'
 alias cs='ssh -o ServerAliveInterval=30 root@47.101.154.114'
 alias gclean='sudo git clean  -d  -fx ""'
 alias c/='cd /'
-alias frp='nohup frpc -c ~/object/frp_0.27.0_linux_amd64/frpc.ini &'
 alias jp='xdotool key Num_Lock'
 alias pscp=parallel-scp
 alias prsync=parallel-rsync
@@ -189,9 +187,7 @@ alias pslurp=parallel-slurp
 alias pssh=parallel-ssh
 # alias pro='unset https_proxy; unset http_proxy; unset ftp_proxy; unset ALL_PROXY; unset all_proxy; unset HTTP_PROXY; unset HTTPS_PROXY'
 # alias a='http --pretty'
-# alias pcg='c $HOME/object/myzsh/oh-my-zsh && /bin/cp /root/.zsh_history `uname -m`/root && /bin/cp $HOME/.zsh_history `uname -m`$HOME && /bin/cp /home/www/.zsh_history `uname -m`/home/www && gac "s" && git fetch origin && git merge origin/master -m "merg" && gp && c -'
 alias gfm='sf . *.go | xargs gofmt -w'
-# alias plcg='c $HOME/object/myzsh/oh-my-zsh && /bin/cp /root/.zsh_history `uname -m`/root && /bin/cp $HOME/.zsh_history `uname -m`$HOME && /bin/cp /home/www/.zsh_history `uname -m`/home/www && gac "s" && git fetch origin && git merge origin/master -m "merg" && c -'
 alias c-='c -'
 alias .c='cd ..'
 # alias jfm='python -mjson.tool|less'
@@ -200,16 +196,15 @@ alias jq='jq --color-output'
 alias k='kill -9'
 alias bb='kill -STOP'
 alias ff='kill -CONT'
-alias xxz='xz -vvv'
 alias cquery='$HOME/.config/TabNine/build/cquery/build/cquery'
 alias xz='xz --memlimit-compress=45% -vvv'
 # alias zx='tar -cf - $@ | xz --memlimit-compress=45% -T 0 -9 -c > "output.tar.xz"'
 # alias zx='tar -Jcf output.tar.xz'
 alias ca='\cat'
 alias ss='ifconfig -a'
-# alias ca='cd $HOME'
 alias al='alias'
 # alias g='gg(){axel $@ || wget $@;}; gg $@;'
+alias g='aria2c '
 alias gg='wget'
 # alias ggg='export all_proxy="socks5://127.0.0.1:1081" && aria2c --file-allocation="falloc"'
 alias ggg='pro && aria2c '
@@ -217,7 +212,6 @@ alias g6='pro && aria2c  --max-concurrent-downloads=6 -x 16 -j 6 -s 6'
 alias w='pro && aria2c  --max-concurrent-downloads=4 -x 4 -j 4 -s 4'
 alias aaa='up; axel -n 8 -a -U "http://127.0.0.1:9910"'
 alias a='up; axel -n 8 -a -U "http://127.0.0.1:9910"'
-alias g='aria2c '
 alias aa='up; axel -a -n 8'
 alias postman='nohup /usr/Postman/Postman &'
 alias le='less -R'
@@ -230,14 +224,13 @@ alias ggt='pro && go get -u -v'
 alias gt='pro && go get -u -v'
 alias re='\less'
 alias gb='pro && \go get -v && go install -p 6; up'
-alias nohup='\rm nohup.out; nohup'
+# alias nohup='\rm nohup.out; nohup'
 alias nohup='mv nohup.out nohup-`date +%Y%m%dT%H%M%S`.out; nohup'
 alias kal='killall'
 alias cb='gcc -g'
 alias gdb='gdb -q'
 alias curl='up; curl --doh-url https://cloudflare-dns.com/dns-query'
 alias cu='\curl --doh-url https://cloudflare-dns.com/dns-query'
-alias kal='killall'
 alias http-server='simple-http-server'
 alias tcf='tcfq(){tar -cvf $*.tar $* }; tcfq'
 
@@ -270,7 +263,7 @@ alias cp='rysncp(){ rsync  -avPh --progress $@ && echo "\n\n\n" "----------- suc
 alias ac='wg222(){ aria2c --max-concurrent-downloads=$1 -x 16 -j $1 -s $@; }; wg222 $@'
 alias clc='\clear'
 alias gap='gap222(){ gac $@; git fetch origin; git merge origin/`git_current_branch` -m merg; gp && echo "\n\n" "---------- success ----------" "\n\n"; git status; }; gap222 $@'
-alias hp='nice -n 19 \htop -d 15'
+alias hp='nice -n 19 \htop -d 35'
 alias pcg='c $HOME/object/myzsh/oh-my-zsh && pr && gap s; \cd -;'
 alias plcg='pcg'
 alias rs='rsync  -avPh --progress'
@@ -279,7 +272,7 @@ alias rrs='rss'
 alias nt='tmux new -s '
 alias ntpd='tmux new -s ${PWD##*/}'
 alias ntd='tmux new -s ${PWD##*/}'
-alias aud='apt full-upgrade -y'
+alias aud='sudo apt full-upgrade -y'
 alias a10='echo "1\a" && sleep 0.5 && echo "\a" && sleep 0.5 && echo "\a" && sleep 0.5 && echo "\a" && sleep 0.5 && echo "\a" && sleep 0.5 && echo "\a" && sleep 0.5 && echo "\a" && sleep 0.5 && echo "\a" && sleep 0.5 && echo "\a" && sleep 0.5 && echo "\a" && sleep 0.5'
 # alias one='echo 1'
 alias one='a10'
@@ -342,19 +335,19 @@ unset no_proxy
 unset ALL_PROXY
 unset all_proxy
 
-export MY_CLANGROOT=/usr/local/clang/bin
-export MY_GOROOT=/usr/local/go/bin
-export MY_JAVA_ROOT=/usr/local/jdk1.8.0_211
-export MY_JAVA_BIN=$MY_JAVA_ROOT/bin
-export MY_JRE_BIN=$MY_JAVA_ROOT/jre/bin
+# export MY_CLANGROOT=/usr/local/clang/bin
+# export MY_GOROOT=/usr/local/go/bin
+# export MY_JAVA_ROOT=/usr/local/jdk1.8.0_211
+# export MY_JAVA_BIN=$MY_JAVA_ROOT/bin
+# export MY_JRE_BIN=$MY_JAVA_ROOT/jre/bin
 export MY_GO_BIN=$HOME/go/bin
 export MY_LOCAL_BIN=$HOME/.local/bin
 export MY_CARGO_BIN=$HOME/.cargo/bin
-export MY_MYSQL_BIN=/www/server/mysql/bin
+# export MY_MYSQL_BIN=/www/server/mysql/bin
 # export CUDA_BIN=/usr/local/cuda-10.1/bin
 # export CUDA_LIB=/usr/local/cuda-10.0/extras/CUPTI/lib64
-export CUDA_BIN=/usr/local/cuda-10.1/bin
-export CUDA_LIB=/usr/local/cuda-10.1/extras/CUPTI/lib64:/usr/local/cuda-10.1/targets/x86_64-linux/lib:/usr/lib/x86_64-linux-gnu
+# export CUDA_BIN=/usr/local/cuda-10.1/bin
+# export CUDA_LIB=/usr/local/cuda-10.1/extras/CUPTI/lib64:/usr/local/cuda-10.1/targets/x86_64-linux/lib:/usr/lib/x86_64-linux-gnu
 
 export PATH=$PATH:$MY_GOROOT:$MY_JAVA_BIN:$MY_CLANGROOT:$MY_JRE_BIN:$MY_GO_BIN:$MY_MYSQL_BIN:$MY_CARGO_BIN:$MY_LOCAL_BIN
 
@@ -362,21 +355,21 @@ export PATH=$PATH:$MY_GOROOT:$MY_JAVA_BIN:$MY_CLANGROOT:$MY_JRE_BIN:$MY_GO_BIN:$
 # export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
 # export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
 # export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_LIB
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_LIB
+# export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CUDA_LIB
 #/usr/local/cuda/extras/CUPTI/lib64
 
 
-alias ur='ssh  root@192.168.1.2 "loginctl unlock-sessions" & ssh  root@192.168.9.205 "loginctl unlock-sessions" &  ssh  root@192.168.43.65 "loginctl unlock-sessions" & ssh  root@192.168.1.104 "loginctl unlock-sessions"'
-alias u='ssh  root@192.168.1.7  "loginctl unlock-sessions"'
+# alias ur='ssh  root@192.168.1.2 "loginctl unlock-sessions" & ssh  root@192.168.9.205 "loginctl unlock-sessions" &  ssh  root@192.168.43.65 "loginctl unlock-sessions" & ssh  root@192.168.1.104 "loginctl unlock-sessions"'
+# alias u='ssh  root@192.168.1.7  "loginctl unlock-sessions"'
 # alias ur='ssh  root@192.168.43.1 "loginctl unlock-sessions" & ssh  root@192.168.1.64 "loginctl unlock-sessions"'
 alias ms='rsync --remove-source-files -avPh --progress'
 alias tele='tele1(){\curl --doh-url https://cloudflare-dns.com/dns-query https://api.telegram.org/bot1790120798:AAGuN-icyEVNLDDA17U_-te-B0Y9jpgeCI8/sendMessage -F "chat_id=-1001889229062" -F "text=$*" }; tele1 $*'
-alias spn='spn1(){ ps -ef | rg -v rg | rg -i $1|awk "{print \$2}" |xargs; }; spn1'
+alias spn='spn1(){ ps -ef | rg -i $1|awk "{print \$2}" |xargs; }; spn1'
 alias sodu='renice -n -20'
 alias df='df -h'
-alias v='gac "s" & vim'
+# alias v='gac "s" & vim'
 alias v='vim'
-alias save_tmux='tmux capture-pane -S - -E - -p'
+alias save_tmux='tmux cure-pane -S - -E - -p'
 
 alias adb='/system/bin/adb'
 alias ssh='ssh -o ServerAliveInterval=30'
@@ -512,3 +505,5 @@ mount_shm4user_with_size(){
 export RUSTC_WRAPPER=sccache
 export SCCACHE_CACHE_SIZE="40G"
 alias unset_sccache='unset RUSTC_WRAPPER'
+export RUSTUP_HOME=/usr/local
+
