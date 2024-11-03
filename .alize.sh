@@ -352,7 +352,7 @@ export MY_CARGO_BIN=$HOME/.cargo/bin
 # export CUDA_BIN=/usr/local/cuda-10.1/bin
 # export CUDA_LIB=/usr/local/cuda-10.1/extras/CUPTI/lib64:/usr/local/cuda-10.1/targets/x86_64-linux/lib:/usr/lib/x86_64-linux-gnu
 
-export PATH=$PATH:$MY_GOROOT:$MY_JAVA_BIN:$MY_CLANGROOT:$MY_JRE_BIN:$MY_GO_BIN:$MY_MYSQL_BIN:$MY_CARGO_BIN:$MY_LOCAL_BIN
+export PATH=$PATH:/usr/sbin:$MY_GOROOT:$MY_JAVA_BIN:$MY_CLANGROOT:$MY_JRE_BIN:$MY_GO_BIN:$MY_MYSQL_BIN:$MY_CARGO_BIN:$MY_LOCAL_BIN
 
 #:$HOME/.config/TabNine/build/cquery/build
 # export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
