@@ -518,3 +518,4 @@ alias installrs='curl --proto "=https" --tlsv1.2 -sSf https://sh.rustup.rs | sh'
 alias setacl='sudo setfacl -m u:pi:rwx'
 
 alias cake-cli='monero-wallet-cli --trusted-daemon --daemon-address cakexmrl7bonq7ovjka5kuwuyd3f7qnkz6z6s6dmsy3uckwra7bvggyd.onion:18081 --proxy 127.0.0.1:9050 --password " "'
+alias js=caja
