@@ -1,0 +1,13 @@
+[user]
+	email = t4nature@proton.me
+	name = Ryder Freeman
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPnHb2xM8J7PvYiwb8p0uErys5KK/EvxUlJgkhszjOqw <ssh://git@github.com|ed25519>
+[core]
+	editor = vim
+[commit]
+	gpgsign = true
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	allowedSignersFile = ~/.ssh/allowed_signers
