@@ -11,5 +11,3 @@
 
 [gpg "ssh"]
 	allowedSignersFile = ~/.ssh/allowed_signers
-[push]
-	gpgsign = true
