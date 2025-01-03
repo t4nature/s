@@ -514,4 +514,13 @@ alias cake-cli='monero-wallet-cli --trusted-daemon --daemon-address cakexmrl7bon
 alias monero-cli-by-tor='monero-wallet-cli --trusted-daemon --daemon-address http://v6a2clstyvpar6rjoqdl75ghjb4joka2hdzv7e2vgtshlzrlu5hojkqd.onion:18081 --proxy 127.0.0.1:9050 --password " "'
 alias ja=caja
 alias agent=trezor-agent
+# alias pwgen_safe='pwgen -Bsy -r "\"'\''(:;{[+-~`]}/\\*+-#$%)<>!|?,.=Il&"'
+
+pwgen_safe() {
+    pwgen -Bsy -r \"\''(:;{[+-~`]}/\*+^-#$)<>!|?,.=Il%&O' $@
+}
+
+
+
+
 pyenv
